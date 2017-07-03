@@ -1,0 +1,5 @@
+c:\users\administrator\documents\visual studio 2017\Projects\Quick\Quick\bin\TypeScriptHTMLApp1.dll
+c:\users\administrator\documents\visual studio 2017\Projects\Quick\Quick\bin\TypeScriptHTMLApp1.pdb
+c:\users\administrator\documents\visual studio 2017\Projects\Quick\Quick\obj\Debug\Quick.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2017\Projects\Quick\Quick\obj\Debug\TypeScriptHTMLApp1.dll
+c:\users\administrator\documents\visual studio 2017\Projects\Quick\Quick\obj\Debug\TypeScriptHTMLApp1.pdb
