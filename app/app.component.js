@@ -6,22 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var enums_1 = require("./shared/enums");
 var HEROES = [
-    { id: 11, name: 'Mr. Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celesritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubbersMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
+    { id: 11, name: 'Nice', gender: enums_1.Gender.Male },
+    { id: 12, name: 'Narco', gender: enums_1.Gender.Female },
+    { id: 13, name: 'Bombasto', gender: enums_1.Gender.Male },
+    { id: 14, name: 'Celesritas', gender: null },
 ];
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
         this.heroes = HEROES;
+        this.GENDER = enums_1.Gender;
     }
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
@@ -31,9 +27,13 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        styles: ["\n  .selected {\n    background-color: #CFD8DC !important;\n    color: white;\n  }\n  .heroes {\n    margin: 0 0 2em 0;\n    list-style-type: none;\n    padding: 0;\n    width: 15em;\n  }\n  .heroes li {\n    cursor: pointer;\n    position: relative;\n    left: 0;\n    background-color: #EEE;\n    margin: .5em;\n    padding: .3em 0;\n    height: 1.6em;\n    border-radius: 4px;\n  }\n  .heroes li.selected:hover {\n    background-color: #BBD8DC !important;\n    color: white;\n  }\n  .heroes li:hover {\n    color: #607D8B;\n    background-color: #DDD;\n    left: .1em;\n  }\n  .heroes .text {\n    position: relative;\n    top: -3px;\n  }\n  .heroes .badge {\n    display: inline-block;\n    font-size: small;\n    color: white;\n    padding: 0.8em 0.7em 0 0.7em;\n    background-color: #607D8B;\n    line-height: 1em;\n    position: relative;\n    left: -1px;\n    top: -4px;\n    height: 1.8em;\n    margin-right: .8em;\n    border-radius: 4px 0 0 4px;\n  }\n"],
-        template: "\n\t  <h1>{{title}}</h1>\n\t  <h2>My Heroes</h2>\n\t<ul class=\"heroes\">\n\t  <li *ngFor=\"let hero of heroes\" (click)=\"onSelect(hero)\" [class.selected]=\"hero === selectedHero\">\n\t\t<span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n\t  </li>\n\t</ul>\n\t<hero-detail [hero]=\"selectedHero\"></hero-detail>\n\t  \n\n",
+        moduleId: module.id,
+        styleUrls: ['./app.component.css'],
+        templateUrl: './app.component.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
+var types;
+(function (types) {
+})(types || (types = {}));
 //# sourceMappingURL=app.component.js.map

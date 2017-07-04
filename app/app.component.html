@@ -1,0 +1,14 @@
+﻿<h1>{{title}}</h1>
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes;let i = index" (click)="onSelect(hero)"  [class.Female]="hero.gender===GENDER.Female" [class.Male]="hero.gender===GENDER.Male" [class.selected]="hero === selectedHero">
+    <span class="badge">{{(i+1) +' - '+hero.id}}</span>
+    <span [ngSwitch]="hero.gender">
+      <span *ngSwitchCase="GENDER.Female">Mrs. </span>
+      <span *ngSwitchCase="GENDER.Male">Mr. </span>
+      <span *ngSwitchDefault="">Sir. </span>
+    </span>
+    {{hero.name}}
+  </li>
+</ul>
+<hero-detail [hero]="selectedHero"></hero-detail>
