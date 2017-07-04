@@ -24,9 +24,11 @@ export class AppComponent  {
 	heroes  = HEROES;
     selectedHero: Hero;
     GENDER: any = Gender;
+    name: string = "Two Way Binding";
 	onSelect(hero: Hero): void {
 	  this.selectedHero = hero;
-	}
+    }
+     
 }
 
 

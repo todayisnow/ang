@@ -18,6 +18,7 @@ var AppComponent = (function () {
         this.title = 'Tour of Heroes';
         this.heroes = HEROES;
         this.GENDER = enums_1.Gender;
+        this.name = "Two Way Binding";
     }
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
