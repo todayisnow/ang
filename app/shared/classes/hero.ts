@@ -1,4 +1,4 @@
-import { Gender } from "./shared/enums";
+import { Gender } from "../enums/gender.enum";
 
 export class Hero {
   id: number;

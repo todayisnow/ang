@@ -9,10 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var hero_1 = require("./hero");
+var hero_1 = require("./shared/classes/hero");
 var HeroDetailComponent = (function () {
     function HeroDetailComponent() {
+        this.dateType = 0;
+        this.asIf = new Date(2020, 1, 1).getTime();
     }
+    HeroDetailComponent.prototype.whatAge = function () {
+        if (!this.asIf) {
+            this.asIf = new Date(2020, 1, 1).getTime();
+            document.getElementById("whatAge").innerHTML = "Get Current Age";
+        }
+        else {
+            this.asIf = null;
+            document.getElementById("whatAge").innerHTML = "Get Future Age";
+        }
+    };
     return HeroDetailComponent;
 }());
 __decorate([
@@ -22,7 +34,8 @@ __decorate([
 HeroDetailComponent = __decorate([
     core_1.Component({
         selector: 'hero-detail',
-        template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n\t\t<br>\n\t\t<label>BirthDate: </label>\n\t\t{{hero.birthdate | date:'MM/dd/yyyy'}} -- {{hero.birthdate | date:'fullDate'}}\n\t\t<br>\n\n\t\t<label>Salary: </label>\n\t\t{{hero.salary | currency:'eur':true:'1.2-2'}}\n\t\t<br>\n\t\t<label>ShortName: </label>\n\t\t{{hero.name | slice:0:1}}\n      </div>\n    </div>\n  "
+        moduleId: module.id,
+        templateUrl: './hero-detail.component.html'
     })
 ], HeroDetailComponent);
 exports.HeroDetailComponent = HeroDetailComponent;

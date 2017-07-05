@@ -10,6 +10,8 @@ var platform_browser_1 = require("@angular/platform-browser"); //tell angular it
 var forms_1 = require("@angular/forms"); //validation ,form, two way binding
 var app_component_1 = require("./app.component");
 var hero_detail_component_1 = require("./hero-detail.component");
+var age_pipe_1 = require("./shared/pipes/age.pipe");
+var search_pipe_1 = require("./shared/pipes/search.pipe");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -18,7 +20,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent],
+        declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, age_pipe_1.AgePipe, search_pipe_1.searchPipe],
         bootstrap: [app_component_1.AppComponent],
     })
 ], AppModule);

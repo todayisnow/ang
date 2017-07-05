@@ -6,19 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var enums_1 = require("./shared/enums");
+var gender_enum_1 = require("./shared/enums/gender.enum");
 var HEROES = [
-    { id: 11, name: 'Nice', gender: enums_1.Gender.Male, birthdate: new Date(2011, 0, 20), salary: 2500 },
-    { id: 12, name: 'Narco', gender: enums_1.Gender.Female, birthdate: new Date(2010, 8, 20), salary: 655.5521 },
-    { id: 13, name: 'Bombasto', gender: enums_1.Gender.Male, birthdate: new Date(2000, 5, 13), salary: 1255 },
-    { id: 14, name: 'Celesritas', gender: null, birthdate: new Date(1987, 1, 20), salary: 250.25 },
+    { id: 11, name: 'Nice', gender: gender_enum_1.Gender.Male, birthdate: new Date(1987, 0, 20), salary: 2500 },
+    { id: 12, name: 'Narco', gender: gender_enum_1.Gender.Female, birthdate: new Date(1990, 8, 20), salary: 655.5521 },
+    { id: 13, name: 'Bombasto', gender: gender_enum_1.Gender.Male, birthdate: new Date(1980, 5, 13), salary: 1255 },
+    { id: 14, name: 'Celesritas', gender: null, birthdate: new Date(2010, 1, 20), salary: 250.25 },
 ];
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
         this.heroes = HEROES;
-        this.GENDER = enums_1.Gender;
-        this.name = "Two Way Binding";
+        this.GENDER = gender_enum_1.Gender;
     }
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;

@@ -1,8 +1,10 @@
 ﻿<h1>{{title}}</h1>
 <h2>My Heroes</h2>
-{{bd | date}}
+
+<input type="text" id="searchKey" [(ngModel)]="searchKey" />
+
 <ul class="heroes">
-  <li *ngFor="let hero of heroes;let i = index" (click)="onSelect(hero)"  
+  <li *ngFor="let hero of heroes | search:searchKey ;let i = index" (click)="onSelect(hero)"  
       [ngClass]="hero.gender===GENDER.Female ? 'Female':hero.gender===GENDER.Male ? 'Male':''"  
       [class.selected]="hero === selectedHero">
     <span class="badge">{{(i+1) +' - '+hero.id}}</span>
@@ -14,5 +16,5 @@
     {{hero.name}} 
   </li>
 </ul>
-
-<hero-detail [hero]="selectedHero"></hero-detail>
+{{resetAsIf}}
+<hero-detail [hero]="selectedHero" ></hero-detail>
