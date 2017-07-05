@@ -22,7 +22,7 @@ __decorate([
 HeroDetailComponent = __decorate([
     core_1.Component({
         selector: 'hero-detail',
-        template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n  "
+        template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n\t\t<br>\n\t\t<label>BirthDate: </label>\n\t\t{{hero.birthdate | date:'MM/dd/yyyy'}} -- {{hero.birthdate | date:'fullDate'}}\n\t\t<br>\n\n\t\t<label>Salary: </label>\n\t\t{{hero.salary | currency:'eur':true:'1.2-2'}}\n\t\t<br>\n\t\t<label>ShortName: </label>\n\t\t{{hero.name | slice:0:1}}\n      </div>\n    </div>\n  "
     })
 ], HeroDetailComponent);
 exports.HeroDetailComponent = HeroDetailComponent;
