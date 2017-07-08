@@ -2,6 +2,11 @@
 import { Hero } from './shared/classes/hero'
 import { Gender } from "./shared/enums/gender.enum";
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
+
 
 const HEROES: Hero[] = [
     { id: 11, name: 'Nice', gender: Gender.Male,birthdate:new Date(1987,0,20),salary:2500 },
@@ -21,17 +26,52 @@ const HEROES: Hero[] = [
 
 export class AppComponent  { 
     
-	title = 'Tour of Heroes';
+  
+    title$: Observable<string>;
+
+    private title = [
+        'Welcome To',
+        'Tour of Heroes'    
+        
+    ];
 	heroes  = HEROES;
     selectedHero: Hero;
     GENDER: any = Gender;
     searchKey: string;
+
+    obj: MyObject = {
+        name: "Old Obj",
+        salary: 333
+    };
+
+    constructor() { this.resend(); }
+
+    resend() {
+        this.title$ = Observable.interval(500)
+            .map(i => this.title[i])
+            .take(this.title.length);
+    } 
+
 	onSelect(hero: Hero): void {
         this.selectedHero = hero;
         
 	  console.log(hero.id)
     }
+    changeObject()
+    {
+        
+        this.obj = {
+            name: "New Obj",
+            salary: 333
+        };
+
+    }
      
 }
+
+export interface MyObject {
+    name: string;
+    salary: number;
+} 
 
 

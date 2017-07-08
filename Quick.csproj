@@ -86,6 +86,8 @@
     <TypeScriptCompile Include="app\shared\classes\hero.ts" />
     <TypeScriptCompile Include="app\shared\enums\gender.enum.ts" />
     <TypeScriptCompile Include="app\shared\pipes\age.pipe.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\get-name.pipe.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\hero-welcome-message.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\search.pipe.ts" />
     <TypeScriptCompile Include="main.ts" />
   </ItemGroup>

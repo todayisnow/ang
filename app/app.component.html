@@ -1,5 +1,14 @@
-﻿<h1>{{title}}</h1>
+﻿<input type="text" [(ngModel)]="obj.name" /><button (click)="changeObject()">Change</button>
+<br />
+Pure:{{obj|GetNamePure}} <br />
+ImPure:{{obj|GetNameImpure}}
+<br />
+<button (click)="resend()">Resend</button>
+<h1>-- {{ title$ | async }} --</h1>
+
+
 <h2>My Heroes</h2>
+
 
 <input type="text" id="searchKey" [(ngModel)]="searchKey" />
 
