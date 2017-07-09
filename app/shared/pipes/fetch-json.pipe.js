@@ -38,4 +38,4 @@ FetchJsonPipe = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], FetchJsonPipe);
 exports.FetchJsonPipe = FetchJsonPipe;
-//# sourceMappingURL=hero-welcome-message.pipe.js.map
+//# sourceMappingURL=fetch-json.pipe.js.map

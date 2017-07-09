@@ -22,16 +22,17 @@ var HEROES = [
 ];
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = [
-            'Welcome To',
-            'Tour of Heroes'
-        ];
         this.heroes = HEROES;
         this.GENDER = gender_enum_1.Gender;
         this.obj = {
             name: "Old Obj",
             salary: 333
         };
+        this.fileName = "heroes.json";
+        this.title = [
+            'Welcome To',
+            'Tour of Heroes'
+        ];
         this.resend();
     }
     AppComponent.prototype.resend = function () {

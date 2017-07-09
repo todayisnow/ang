@@ -36,3 +36,43 @@ C:\Users\Administrator\documents\visual studio 2017\Projects\Quick\Quick\app\app
 C:\Users\Administrator\documents\visual studio 2017\Projects\Quick\Quick\app\app.module.js.map
 C:\Users\Administrator\documents\visual studio 2017\Projects\Quick\Quick\main.js
 C:\Users\Administrator\documents\visual studio 2017\Projects\Quick\Quick\main.js.map
+D:\Code\ang\app\shared\enums\gender.enum.js
+D:\Code\ang\app\shared\enums\gender.enum.js.map
+D:\Code\ang\app\shared\classes\hero.js
+D:\Code\ang\app\shared\classes\hero.js.map
+D:\Code\ang\app\app.component.js
+D:\Code\ang\app\app.component.js.map
+D:\Code\ang\app\hero-detail.component.js
+D:\Code\ang\app\hero-detail.component.js.map
+D:\Code\ang\app\shared\pipes\age.pipe.js
+D:\Code\ang\app\shared\pipes\age.pipe.js.map
+D:\Code\ang\app\shared\pipes\search.pipe.js
+D:\Code\ang\app\shared\pipes\search.pipe.js.map
+D:\Code\ang\app\shared\pipes\get-name.pipe.js
+D:\Code\ang\app\shared\pipes\get-name.pipe.js.map
+D:\Code\ang\app\shared\pipes\fetch-json.pipe.js
+D:\Code\ang\app\shared\pipes\fetch-json.pipe.js.map
+D:\Code\ang\app\app.module.js
+D:\Code\ang\app\app.module.js.map
+D:\Code\ang\main.js
+D:\Code\ang\main.js.map
+D:\Code\ang\app\shared\enums\gender.enum.js
+D:\Code\ang\app\shared\enums\gender.enum.js.map
+D:\Code\ang\app\shared\classes\hero.js
+D:\Code\ang\app\shared\classes\hero.js.map
+D:\Code\ang\app\app.component.js
+D:\Code\ang\app\app.component.js.map
+D:\Code\ang\app\hero-detail.component.js
+D:\Code\ang\app\hero-detail.component.js.map
+D:\Code\ang\app\shared\pipes\age.pipe.js
+D:\Code\ang\app\shared\pipes\age.pipe.js.map
+D:\Code\ang\app\shared\pipes\search.pipe.js
+D:\Code\ang\app\shared\pipes\search.pipe.js.map
+D:\Code\ang\app\shared\pipes\get-name.pipe.js
+D:\Code\ang\app\shared\pipes\get-name.pipe.js.map
+D:\Code\ang\app\shared\pipes\fetch-json.pipe.js
+D:\Code\ang\app\shared\pipes\fetch-json.pipe.js.map
+D:\Code\ang\app\app.module.js
+D:\Code\ang\app\app.module.js.map
+D:\Code\ang\main.js
+D:\Code\ang\main.js.map

@@ -36,7 +36,8 @@ HeroDetailComponent = __decorate([
         selector: 'hero-detail',
         moduleId: module.id,
         templateUrl: './hero-detail.component.html'
-    })
+    }),
+    __metadata("design:paramtypes", [])
 ], HeroDetailComponent);
 exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map

@@ -27,13 +27,7 @@ const HEROES: Hero[] = [
 export class AppComponent  { 
     
   
-    title$: Observable<string>;
-
-    private title = [
-        'Welcome To',
-        'Tour of Heroes'    
-        
-    ];
+    
 	heroes  = HEROES;
     selectedHero: Hero;
     GENDER: any = Gender;
@@ -43,7 +37,14 @@ export class AppComponent  {
         name: "Old Obj",
         salary: 333
     };
+    fileName: string = "heroes.json";
+title$: Observable<string>;
 
+    private title = [
+        'Welcome To',
+        'Tour of Heroes'    
+        
+    ];
     constructor() { this.resend(); }
 
     resend() {

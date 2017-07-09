@@ -12,7 +12,7 @@
           <StartPageUrl>
           </StartPageUrl>
           <StartAction>CurrentPage</StartAction>
-          <AspNetDebugging>True</AspNetDebugging>
+          <AspNetDebugging>False</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
@@ -24,7 +24,7 @@
           </StartCmdLineArguments>
           <StartWorkingDirectory>
           </StartWorkingDirectory>
-          <EnableENC>True</EnableENC>
+          <EnableENC>False</EnableENC>
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
         </WebProjectProperties>
       </FlavorProperties>
