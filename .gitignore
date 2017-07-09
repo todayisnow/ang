@@ -2,4 +2,4 @@
 /obj/
 /bin/
 /node_modules
-/bin/debug
+/bin/Debug/
