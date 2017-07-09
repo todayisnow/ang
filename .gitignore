@@ -1,5 +1,6 @@
-﻿/.vs/
-/obj/
-/bin/
-/node_modules
-/bin/Debug/
+﻿.vs/
+obj/
+bin/
+node_modules
+bin/Debug/
+packages/
