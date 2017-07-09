@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.component.css" />
+    <Content Include="app\hero-detail.component.html" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="favicon.ico" />
@@ -82,8 +83,12 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\hero-detail.component.ts" />
-    <TypeScriptCompile Include="app\Hero.ts" />
-    <TypeScriptCompile Include="app\shared\enums.ts" />
+    <TypeScriptCompile Include="app\shared\classes\hero.ts" />
+    <TypeScriptCompile Include="app\shared\enums\gender.enum.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\age.pipe.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\get-name.pipe.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\hero-welcome-message.pipe.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\search.pipe.ts" />
     <TypeScriptCompile Include="main.ts" />
   </ItemGroup>
   <ItemGroup>

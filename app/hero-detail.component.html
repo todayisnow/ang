@@ -1,0 +1,37 @@
+﻿<div *ngIf="hero">
+    <h2>{{hero.name}} details!</h2>
+    <div><label>id: </label>{{hero.id}}</div>
+    
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name" />
+        <br>
+        <label>Age: </label>
+        {{hero.birthdate | age:asIf}} <button id="whatAge" (click)="whatAge()">Get Current Age</button>
+        <br>
+        <input type="radio"  name="dateType" [value]="0" [(ngModel)]="dateType" />FullDate
+        <input type="radio" name="dateType" [value]="1"  [(ngModel)]="dateType" />MM/dd/yyyy
+        <br />
+        <label>BirthDate: </label>
+        <div *ngIf="dateType==0">
+            {{hero.birthdate | date:'fullDate'}}
+        </div>
+        <div *ngIf="dateType==1">
+            {{hero.birthdate | date:'MM/dd/yyyy'}}
+        </div>
+        
+        
+        <br>
+        <input type="radio" name="currencyType"  (click)="currenyType='eur'" />EUR
+        <input type="radio" name="currencyType" (click)="currenyType='egp'" />EGP
+        <br />
+        <label>Salary: </label>
+        {{hero.salary | currency:currenyType:true:'1.2-2'}}
+        <br>
+        <label>ShortName: </label>
+        {{hero.name | slice:0:1}}
+        
+
+       
+    </div>
+</div>
