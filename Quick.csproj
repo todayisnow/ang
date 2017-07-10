@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -62,7 +61,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.component.css" />
+    <Content Include="app\my-heroes.component.css" />
     <Content Include="app\hero-detail.component.html" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -82,13 +81,17 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\my-heroes.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\hero-detail.component.ts" />
+    <TypeScriptCompile Include="app\hero.service.ts" />
+    <TypeScriptCompile Include="app\mock-heroes.ts" />
     <TypeScriptCompile Include="app\shared\classes\hero.ts" />
     <TypeScriptCompile Include="app\shared\enums\gender.enum.ts" />
     <TypeScriptCompile Include="app\shared\pipes\age.pipe.ts" />
-    <TypeScriptCompile Include="app\shared\pipes\get-name.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\fetch-json.pipe.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\get-name.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\search.pipe.ts" />
     <TypeScriptCompile Include="main.ts" />
   </ItemGroup>
@@ -96,7 +99,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.component.html" />
+    <Content Include="app\my-heroes.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\FontAwesome.otf" />
@@ -112,21 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\fontawesome-webfont.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="heroes.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="heroes1.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

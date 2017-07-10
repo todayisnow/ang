@@ -3,17 +3,16 @@
 Pure:{{obj|GetNamePure}} <br />
 ImPure:{{obj|GetNameImpure}}
 <br />
-<button (click)="resend()">Resend</button>
-<h1>-- {{ title$ | async }} --</h1>
 
 
-<h2>My Heroes</h2>
+
+<h2>{{subTitle}}</h2>
 
 
 <input type="text" id="searchKey" [(ngModel)]="searchKey" />
 
 <ul class="heroes">
-  <li *ngFor="let hero of heroes | search:searchKey ;let i = index" (click)="onSelect(hero)"  
+  <li *ngFor="let hero of heroes  | search:searchKey ;let i = index" (click)="onSelect(hero)"  
       [ngClass]="hero.gender===GENDER.Female ? 'Female':hero.gender===GENDER.Male ? 'Male':''"  
       [class.selected]="hero === selectedHero">
     <span class="badge">{{(i+1) +' - '+hero.id}}</span>
@@ -26,11 +25,11 @@ ImPure:{{obj|GetNameImpure}}
   </li>
 </ul>
 {{resetAsIf}}
-<hero-detail [hero]="selectedHero" ></hero-detail>
+<hero-detail [hero]="selectedHero" (sendSubTitle)="setSubTitle($event)" ></hero-detail>
 
 
 <br />
-<==============================================================>
+<==================================>
 <br />
 <h2>Heroes from JSON File</h2>
 

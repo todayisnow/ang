@@ -7,6 +7,7 @@ import { Hero} from '../classes/hero'
 })
 export class searchPipe implements PipeTransform {
     transform(value: Hero[], s: string = ''): any {
+        if (value != undefined && value!=null)
         return value.filter(x => x.name.toLowerCase().startsWith(s.toLowerCase()));
     }
 }
