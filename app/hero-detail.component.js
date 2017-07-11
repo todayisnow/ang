@@ -14,7 +14,11 @@ var HeroDetailComponent = (function () {
     function HeroDetailComponent() {
         this.dateType = 0;
         this.asIf = new Date(2020, 1, 1).getTime();
+        this.sendSubTitle = new core_1.EventEmitter();
     }
+    HeroDetailComponent.prototype.onSendSubTitle = function () {
+        this.sendSubTitle.emit("My " + this.hero.name);
+    };
     HeroDetailComponent.prototype.whatAge = function () {
         if (!this.asIf) {
             this.asIf = new Date(2020, 1, 1).getTime();
@@ -25,19 +29,25 @@ var HeroDetailComponent = (function () {
             document.getElementById("whatAge").innerHTML = "Get Future Age";
         }
     };
+    HeroDetailComponent.prototype.ngOnChanges = function (changes) {
+        console.log(changes);
+    };
     return HeroDetailComponent;
 }());
 __decorate([
     core_1.Input(),
     __metadata("design:type", hero_1.Hero)
 ], HeroDetailComponent.prototype, "hero", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], HeroDetailComponent.prototype, "sendSubTitle", void 0);
 HeroDetailComponent = __decorate([
     core_1.Component({
         selector: 'hero-detail',
         moduleId: module.id,
         templateUrl: './hero-detail.component.html'
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], HeroDetailComponent);
 exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map

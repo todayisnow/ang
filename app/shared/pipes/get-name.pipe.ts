@@ -1,6 +1,6 @@
 ﻿
 import { Pipe, PipeTransform } from '@angular/core';
-import { MyObject } from "../../app.component";
+import { MyObject } from "../../my-heroes.component";
 
 @Pipe({
     name: 'GetNamePure'
