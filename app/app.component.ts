@@ -7,15 +7,8 @@
 
     @Component({
       selector: 'my-app',
-      template: `
-        <button (click)="resend()">Resend</button>
-        <h1>-- {{ title$ | async }} --</h1>
-<nav>
-<a routerLink="/dashboard">Dashboard</a>        
-<a routerLink="/heroes">Heroes</a> 
-</nav>
-        <router-outlet></router-outlet>
-      `
+      styleUrls: ['./app.component.css'],
+      templateUrl: './app.component.html'
     })
     export class AppComponent {
         title$: Observable<string>;

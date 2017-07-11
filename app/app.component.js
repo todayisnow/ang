@@ -32,7 +32,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n        <button (click)=\"resend()\">Resend</button>\n        <h1>-- {{ title$ | async }} --</h1>\n<nav>\n<a routerLink=\"/dashboard\">Dashboard</a>        \n<a routerLink=\"/heroes\">Heroes</a> \n</nav>\n        <router-outlet></router-outlet>\n      "
+        styleUrls: ['./app.component.css'],
+        templateUrl: './app.component.html'
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

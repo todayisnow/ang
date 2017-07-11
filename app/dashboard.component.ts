@@ -2,17 +2,10 @@
 import { Hero } from './shared/classes/hero';
 import { HeroService } from './hero.service';
 @Component({
-  selector: 'my-dashboard',
-  template: `
-  <h3> Top Heroes</h3>
-    <div class="grid grid-pad" >
-    <div *ngFor="let hero of heroes" class="col-1-2" >
-    <div class="module hero" >
-    <h4>{{hero.name }}</h4>
-    < /div>
-    < /div>
-    < /div>
-  `
+    selector: 'my-dashboard',
+    styleUrls: ['./dashboard.component.css'],
+    templateUrl : './dashboard.component.html'
+
 })
 export class DashboardComponent implements OnInit {
 
@@ -22,6 +15,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 2));
+      .then(heroes => this.heroes = heroes.slice(0, 2));
   }
 }

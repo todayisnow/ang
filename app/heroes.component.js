@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var gender_enum_1 = require("./shared/enums/gender.enum");
 var hero_service_1 = require("./hero.service");
+var router_1 = require("@angular/router");
 var HeroesComponent = (function () {
-    function HeroesComponent(heroService) {
+    function HeroesComponent(heroService, router) {
         this.heroService = heroService;
+        this.router = router;
         this.subTitle = "My Hero";
         this.GENDER = gender_enum_1.Gender;
         this.obj = {
@@ -22,6 +24,9 @@ var HeroesComponent = (function () {
         };
         this.fileName = "heroes.json";
     }
+    HeroesComponent.prototype.gotoDetail = function () {
+        this.router.navigate(['/detail', this.selectedHero.id]);
+    };
     HeroesComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.heroService.getHeroesSlowly().then(function (heros) { return _this.heroes = heros; });
@@ -45,10 +50,10 @@ HeroesComponent = __decorate([
     core_1.Component({
         selector: 'my-heroes',
         moduleId: module.id,
-        styleUrls: ['./my-heroes.component.css'],
-        templateUrl: './my-heroes.component.html'
+        styleUrls: ['./heroes.component.css'],
+        templateUrl: './heroes.component.html'
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
+    __metadata("design:paramtypes", [hero_service_1.HeroService, router_1.Router])
 ], HeroesComponent);
 exports.HeroesComponent = HeroesComponent;
-//# sourceMappingURL=my-heroes.component.js.map
+//# sourceMappingURL=heroes.component.js.map

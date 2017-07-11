@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -61,7 +62,10 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\my-heroes.component.css" />
+    <Content Include="app\app.component.css" />
+    <Content Include="app\app.component.html" />
+    <Content Include="app\dashboard.component.css" />
+    <Content Include="app\heroes.component.css" />
     <Content Include="app\hero-detail.component.html" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -80,9 +84,11 @@
     <Content Include="tslint.json" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\app-routing.module.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\dashboard.component.ts" />
-    <TypeScriptCompile Include="app\my-heroes.component.ts" />
+    <TypeScriptCompile Include="app\hero-lite.component.ts" />
+    <TypeScriptCompile Include="app\heroes.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\hero-detail.component.ts" />
     <TypeScriptCompile Include="app\hero.service.ts" />
@@ -99,7 +105,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\my-heroes.component.html" />
+    <Content Include="app\heroes.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\FontAwesome.otf" />
@@ -115,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\dashboard.component.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

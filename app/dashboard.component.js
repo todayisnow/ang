@@ -18,14 +18,15 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.heroService.getHeroes()
-            .then(function (heroes) { return _this.heroes = heroes.slice(1, 2); });
+            .then(function (heroes) { return _this.heroes = heroes.slice(0, 2); });
     };
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
     core_1.Component({
         selector: 'my-dashboard',
-        template: "\n  <h3> Top Heroes</h3>\n    <div class=\"grid grid-pad\" >\n    <div *ngFor=\"let hero of heroes\" class=\"col-1-2\" >\n    <div class=\"module hero\" >\n    <h4>{{hero.name }}</h4>\n    < /div>\n    < /div>\n    < /div>\n  "
+        styleUrls: ['./dashboard.component.css'],
+        templateUrl: './dashboard.component.html'
     }),
     __metadata("design:paramtypes", [hero_service_1.HeroService])
 ], DashboardComponent);

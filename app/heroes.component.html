@@ -25,6 +25,9 @@ ImPure:{{obj|GetNameImpure}}
   </li>
 </ul>
 {{resetAsIf}}
+<div *ngIf="selectedHero">
+    <button (click)="gotoDetail()">View Details</button>
+</div>
 <hero-detail [hero]="selectedHero" (sendSubTitle)="setSubTitle($event)" ></hero-detail>
 
 

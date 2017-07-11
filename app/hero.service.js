@@ -5,6 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var core_1 = require("@angular/core");
 var mock_heroes_1 = require("./mock-heroes");
 var HeroService = (function () {
@@ -20,10 +23,16 @@ var HeroService = (function () {
             setTimeout(function () { return resolve(_this.getHeroes()); }, 2000);
         });
     };
+    HeroService.prototype.getHero = function (id) {
+        return Promise.resolve(mock_heroes_1.HEROES.find(function (hero) { return hero.id === id; }));
+        //return this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
+    };
     return HeroService;
 }());
 HeroService = __decorate([
     core_1.Injectable() //emit metadata about the service. The metadata specifies that Angular may need to inject other dependencies into this service.
+    ,
+    __metadata("design:paramtypes", [])
 ], HeroService);
 exports.HeroService = HeroService;
 //# sourceMappingURL=hero.service.js.map

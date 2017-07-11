@@ -5,7 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent } from "./my-heroes.component";
+import { HeroLiteComponent } from './hero-lite.component';
+import { HeroesComponent } from "./heroes.component";
 import { DashboardComponent } from "./dashboard.component";
 import { HeroService } from './hero.service';
 
@@ -15,25 +16,21 @@ import { GetNamePurePipe, GetNameImpurePipe } from "./shared/pipes/get-name.pipe
 import { FetchJsonPipe } from './shared/pipes/fetch-json.pipe'
 
 import { Routes, RouterModule } from '@angular/router';
-
+import {AppRoutingModule } from './app-routing.module'
 
 const routes: Routes = [
     { path: 'heroes', component: HeroesComponent },
     { path: 'dashboard', component: DashboardComponent },
-    {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-    }
-
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: 'detail/:id', component: HeroLiteComponent }
 ];
 
 
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(routes, { useHash: true }) ],// all modules
-    declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent,
+    imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule  ],// all modules
+    declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, HeroLiteComponent,
                  AgePipe,searchPipe, GetNamePurePipe, GetNameImpurePipe, FetchJsonPipe],//all components
   providers: [HeroService],
   bootstrap: [AppComponent],//start component

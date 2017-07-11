@@ -3,6 +3,7 @@ import { Hero } from './shared/classes/hero'
 import { Gender } from "./shared/enums/gender.enum";
 import { HeroService } from "./hero.service";
 
+import { Router } from "@angular/router"
 
 
 
@@ -11,8 +12,8 @@ import { HeroService } from "./hero.service";
     
     selector: 'my-heroes',
     moduleId: module.id,
-    styleUrls: ['./my-heroes.component.css'],
-    templateUrl: './my-heroes.component.html'
+    styleUrls: ['./heroes.component.css'],
+    templateUrl: './heroes.component.html'
    
 })
 
@@ -35,11 +36,13 @@ export class HeroesComponent implements OnInit {
 
     
     
-    constructor(private heroService: HeroService) { 
         
-       
+    constructor(private heroService: HeroService, private router: Router) { 
+              
     }
-    
+    gotoDetail(): void {
+        this.router.navigate(['/detail', this.selectedHero.id]);
+    }
     ngOnInit(): void {
         this.heroService.getHeroesSlowly().then(heros => this.heroes = heros);
         
