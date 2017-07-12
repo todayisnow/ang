@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mock_heroes_1 = require("./mock-heroes");
 require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
 var http_1 = require("@angular/http");
 var HeroService = (function () {
     function HeroService(http) {
@@ -21,7 +22,9 @@ var HeroService = (function () {
     };
     // stub
     HeroService.prototype.getObservableHeroes = function () {
-        return this.http.get('./heroes.json').map(function (heroes) { return heroes.json(); });
+        return this.http.get('./heroes2.json')
+            .map(function (heroes) { return heroes.json(); })
+            .catch(function (x) { return x.json(); });
     };
     HeroService.prototype.getHeroesSlowly = function () {
         var _this = this;

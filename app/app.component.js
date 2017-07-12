@@ -13,8 +13,10 @@ var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/observable/interval");
 require("rxjs/add/operator/map");
 require("rxjs/add/operator/take");
+var hero_service_1 = require("./hero.service");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(heroService) {
+        this.heroService = heroService;
         this.title = [
             'Welcome To',
             'Tour of Heroes'
@@ -27,6 +29,11 @@ var AppComponent = (function () {
             .map(function (i) { return _this.title[i]; })
             .take(this.title.length);
     };
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.heroService.getObservableHeroes()
+            .subscribe(function (data) { return _this.obHeros = data; }, function (error) { return console.log("error: " + error); });
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
@@ -35,7 +42,7 @@ AppComponent = __decorate([
         styleUrls: ['./app.component.css'],
         templateUrl: './app.component.html'
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [hero_service_1.HeroService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

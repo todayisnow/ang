@@ -4,7 +4,8 @@ import { Hero } from './shared/classes/hero'
 import { HEROES } from './mock-heroes';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { Http } from '@angular/http'
+import 'rxjs/add/operator/catch';
+import { Http, Response } from '@angular/http'
 
 @Injectable() //emit metadata about the service. The metadata specifies that Angular may need to inject other dependencies into this service.
 export class HeroService {
@@ -21,7 +22,10 @@ export class HeroService {
     // stub
     getObservableHeroes(): Observable<Hero[]>
     {
-        return this.http.get('./heroes.json').map(heroes => <Hero[]>heroes.json());
+        return this.http.get('./heroes2.json')
+            .map(heroes => <Hero[]>heroes.json())
+            .catch((x: Response) =>  x.json() );
+
     }
 
 
