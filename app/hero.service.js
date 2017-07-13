@@ -20,9 +20,21 @@ var HeroService = (function () {
     HeroService.prototype.getHeroes = function () {
         return Promise.resolve(mock_heroes_1.HEROES);
     };
+    HeroService.prototype.addHero = function (hero) {
+        var body = JSON.stringify(hero);
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post('http://localhost/Heroes/api/Heroes/Post', body, options)
+            .map(function (data) {
+            console.log("PostData: ", data.json());
+            return data.json();
+        })
+            .catch(function (x) { return x.json(); });
+    };
     // stub
     HeroService.prototype.getObservableHeroes = function () {
-        return this.http.get('./heroes2.json')
+        // return this.http.get('./heroes2.json')
+        return this.http.get('http://localhost/Heroes/api/Heroes/Get')
             .map(function (heroes) { return heroes.json(); })
             .catch(function (x) { return x.json(); });
     };
