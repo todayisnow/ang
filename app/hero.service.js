@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var mock_heroes_1 = require("./mock-heroes");
+var webapi_1 = require("./webapi");
 require("rxjs/add/operator/map");
 require("rxjs/add/operator/catch");
 var http_1 = require("@angular/http");
@@ -24,7 +25,7 @@ var HeroService = (function () {
         var body = JSON.stringify(hero);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.post('http://localhost/Heroes/api/Heroes/Post', body, options)
+        return this.http.post(webapi_1.PostHeroes, body, options)
             .map(function (data) {
             console.log("PostData: ", data.json());
             return data.json();
@@ -34,7 +35,7 @@ var HeroService = (function () {
     // stub
     HeroService.prototype.getObservableHeroes = function () {
         // return this.http.get('./heroes2.json')
-        return this.http.get('http://localhost/Heroes/api/Heroes/Get')
+        return this.http.get(webapi_1.GetHeroes)
             .map(function (heroes) { return heroes.json(); })
             .catch(function (x) { return x.json(); });
     };

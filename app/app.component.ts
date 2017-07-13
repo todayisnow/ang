@@ -30,9 +30,8 @@
         constructor(private heroService: HeroService) { this.resend(); }
         ngOnInit(): void {
             this.heroService.getObservableHeroes()
-                .subscribe(data => this.obHeros = data, error => console.log("error: " + error));
-            this.heroService.addHero({ id: 14, name: 'Celesritas', gender: null, birthdate: new Date(2010, 1, 20), salary: 250.25 }).
-                subscribe(data => console.log("Add at client :" + data), error => console.log("errorClient: " + error));
+                .subscribe(data => this.obHeros = data, error => console.log("error: "+error));
+            
 
    
         }

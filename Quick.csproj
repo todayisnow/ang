@@ -99,6 +99,7 @@
     <TypeScriptCompile Include="app\shared\pipes\fetch-json.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\get-name.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\search.pipe.ts" />
+    <TypeScriptCompile Include="app\webapi.ts" />
     <TypeScriptCompile Include="main.ts" />
   </ItemGroup>
   <ItemGroup>

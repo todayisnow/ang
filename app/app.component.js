@@ -33,8 +33,6 @@ var AppComponent = (function () {
         var _this = this;
         this.heroService.getObservableHeroes()
             .subscribe(function (data) { return _this.obHeros = data; }, function (error) { return console.log("error: " + error); });
-        this.heroService.addHero({ id: 14, name: 'Celesritas', gender: null, birthdate: new Date(2010, 1, 20), salary: 250.25 }).
-            subscribe(function (data) { return console.log("Add at client :" + data); }, function (error) { return console.log("errorClient: " + error); });
     };
     return AppComponent;
 }());

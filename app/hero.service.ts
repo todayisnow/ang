@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Hero } from './shared/classes/hero'
 import { HEROES } from './mock-heroes';
 import { Observable } from 'rxjs/Observable';
+import { GetHeroes, PostHeroes } from './webapi'
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Http, Response, Headers, RequestOptions } from '@angular/http'
@@ -24,7 +25,7 @@ export class HeroService {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post('http://localhost/Heroes/api/Heroes/Post', body, options)
+        return this.http.post(PostHeroes, body, options)
             .map(data => {
                 console.log("PostData: ", data.json());
                 return data.json();
@@ -35,7 +36,7 @@ export class HeroService {
     getObservableHeroes(): Observable<Hero[]>
     {
         // return this.http.get('./heroes2.json')
-        return this.http.get('http://localhost/Heroes/api/Heroes/Get')
+        return this.http.get(GetHeroes)
             .map(heroes => <Hero[]>heroes.json())
             .catch((x: Response) =>  x.json() );
 
