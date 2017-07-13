@@ -22,7 +22,7 @@ export class HeroService {
     }
     addHero(hero: Hero): Observable<any> {
         let body = JSON.stringify(hero);
-        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
         return this.http.post(PostHeroes, body, options)
