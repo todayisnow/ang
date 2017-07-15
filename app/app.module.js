@@ -19,13 +19,7 @@ var age_pipe_1 = require("./shared/pipes/age.pipe");
 var search_pipe_1 = require("./shared/pipes/search.pipe");
 var get_name_pipe_1 = require("./shared/pipes/get-name.pipe");
 var fetch_json_pipe_1 = require("./shared/pipes/fetch-json.pipe");
-var app_routing_module_1 = require("./app-routing.module");
-var routes = [
-    { path: 'heroes', component: heroes_component_1.HeroesComponent },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'detail/:id', component: hero_lite_component_1.HeroLiteComponent }
-];
+var app_routing_module_1 = require("./app-routing.module"); //
 var AppModule = (function () {
     function AppModule() {
     }

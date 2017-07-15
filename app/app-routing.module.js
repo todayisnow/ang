@@ -12,9 +12,9 @@ var heroes_component_1 = require("./heroes.component");
 var hero_lite_component_1 = require("./hero-lite.component");
 var routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: 'dashboard', component: dashboard_component_1.DashboardComponent, data: { title: 'MyData' } },
     { path: 'detail/:id', component: hero_lite_component_1.HeroLiteComponent },
-    { path: 'heroes', component: heroes_component_1.HeroesComponent }
+    { path: 'heroes', component: heroes_component_1.HeroesComponent },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

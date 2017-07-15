@@ -16,16 +16,7 @@ import { GetNamePurePipe, GetNameImpurePipe } from "./shared/pipes/get-name.pipe
 import { FetchJsonPipe } from './shared/pipes/fetch-json.pipe'
 
 import { Routes, RouterModule } from '@angular/router';
-import {AppRoutingModule } from './app-routing.module'
-
-const routes: Routes = [
-    { path: 'heroes', component: HeroesComponent },
-    { path: 'dashboard', component: DashboardComponent },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'detail/:id', component: HeroLiteComponent }
-];
-
-
+import {AppRoutingModule } from './app-routing.module' //
 
 
 @NgModule({

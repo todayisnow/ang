@@ -31,9 +31,12 @@ export class HeroLiteComponent implements OnInit {
         private location: Location
     ) { }
     ngOnInit(): void {
-        this.route.paramMap
-            .switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
-            .subscribe(hero => this.hero = hero);
+        let id = +this.route.snapshot.params['id'];// + to cast string to int
+        this.heroService.getHero(id).then(hero => this.hero = hero);
+           // both are the same  
+        //this.route.paramMap
+        //    .switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
+        //    .subscribe(hero => this.hero = hero);
     }
     goBack(): void {
         this.location.back();

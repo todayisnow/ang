@@ -23,9 +23,12 @@ var HeroLiteComponent = (function () {
     }
     HeroLiteComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.paramMap
-            .switchMap(function (params) { return _this.heroService.getHero(+params.get('id')); })
-            .subscribe(function (hero) { return _this.hero = hero; });
+        var id = +this.route.snapshot.params['id']; // + to cast string to int
+        this.heroService.getHero(id).then(function (hero) { return _this.hero = hero; });
+        // both are the same  
+        //this.route.paramMap
+        //    .switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
+        //    .subscribe(hero => this.hero = hero);
     };
     HeroLiteComponent.prototype.goBack = function () {
         this.location.back();

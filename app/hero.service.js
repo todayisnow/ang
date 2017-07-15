@@ -23,11 +23,10 @@ var HeroService = (function () {
     };
     HeroService.prototype.addHero = function (hero) {
         var body = JSON.stringify(hero);
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json', 'Accept': 'application/json' });
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json; charset=utf-8', 'Accept': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         return this.http.post(webapi_1.PostHeroes, body, options)
             .map(function (data) {
-            console.log("PostData: ", data.json());
             return data.json();
         })
             .catch(function (x) { return x.json(); });
