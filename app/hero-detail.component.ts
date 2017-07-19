@@ -4,7 +4,7 @@
 import { Hero } from './shared/classes/hero';
 @Component({
     selector: 'hero-detail',
-    moduleId: module.id,
+    //moduleId: module.id,
     templateUrl:'./hero-detail.component.html'
 })
 export class HeroDetailComponent implements OnChanges {

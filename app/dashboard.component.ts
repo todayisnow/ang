@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 
 })
 export class DashboardComponent implements OnInit {
-    data: any;
+    data: ExternalData;
  heroes: Hero[] = [];
 
  constructor(private heroService: HeroService, private route: ActivatedRoute) { }
@@ -18,8 +18,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.heroService.getHeroes()
           .then(heroes => this.heroes = heroes.slice(0, 2));
-    this.data = this.route
-        .data
-        .subscribe(v=>console.log("Data from route: "+v.title));
+  //  this.data = this.route        .data        .subscribe(v=>console.log("Data from route: "+v.title));
   }
+}
+export class ExternalData{
+title:string;
 }

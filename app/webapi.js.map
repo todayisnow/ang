@@ -1,1 +1,1 @@
-{"version":3,"file":"webapi.js","sourceRoot":"","sources":["webapi.ts"],"names":[],"mappings":";AAAA,iDAAiD;AACjD,IAAI,UAAU,GAAG,6BAA6B,CAAC;AACpC,QAAA,SAAS,GAAM,UAAU,eAAY,CAAC;AACtC,QAAA,UAAU,GAAM,UAAU,gBAAa,CAAC"}
+{"version":3,"sources":["webapi.ts"],"names":[],"mappings":"AAAA,iDAAiD;AACjD,IAAI,UAAU,GAAG,6BAA6B,CAAC;AAC/C,MAAM,CAAC,IAAI,SAAS,GAAM,UAAU,eAAY,CAAC;AACjD,MAAM,CAAC,IAAI,UAAU,GAAM,UAAU,gBAAa,CAAC","file":"webapi.js","sourceRoot":""}
