@@ -1,4 +1,4 @@
-﻿import { NgModule }      from '@angular/core'; // module decoration
+﻿import { NgModule,enableProdMode }      from '@angular/core'; // module decoration
 import { BrowserModule } from '@angular/platform-browser';//tell angular it will work on browser not desktop or mobile
 import { FormsModule } from '@angular/forms';//validation ,form, two way binding
 import { HttpModule } from '@angular/http';
@@ -18,7 +18,7 @@ import { FetchJsonPipe } from './shared/pipes/fetch-json.pipe'
 import { Routes, RouterModule } from '@angular/router';
 import {AppRoutingModule } from './app-routing.module' //
 
-
+enableProdMode();
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule  ],// all modules
     declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, HeroLiteComponent,

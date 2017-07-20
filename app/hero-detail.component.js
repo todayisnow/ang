@@ -44,7 +44,7 @@ __decorate([
 HeroDetailComponent = __decorate([
     Component({
         selector: 'hero-detail',
-        //moduleId: module.id,
+        moduleId: "./app/",
         templateUrl: './hero-detail.component.html'
     })
 ], HeroDetailComponent);

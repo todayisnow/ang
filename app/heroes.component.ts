@@ -11,7 +11,7 @@ import { Router } from "@angular/router"
 @Component({
     
     selector: 'my-heroes',
-    //moduleId: module.id,
+    moduleId: "./app/",
     styleUrls: ['./heroes.component.css'],
     templateUrl: './heroes.component.html'
    

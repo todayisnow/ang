@@ -20,7 +20,9 @@
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ././**/*.ts -t verbose",
     "ngc": "node_modules/.bin/ngc -p tsconfig.aot.json",
-	"rollup": "node_modules/.bin/rollup -c rollup-config.js"
+	"rollup": "node_modules/.bin/rollup -c rollup-config.js",
+	"build:aot": " npm run ngc & npm run rollup & npm run serve"
+	
   },
   "keywords": [],
   "author": "",
