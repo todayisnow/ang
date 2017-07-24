@@ -9,6 +9,8 @@ import { HeroLiteComponent } from './hero-lite.component';
 import { HeroesComponent } from "./heroes.component";
 import { DashboardComponent } from "./dashboard.component";
 import { HeroService } from './hero.service';
+import {HeroDetailGuard} from './hero-guard.service';
+
 
 import { AgePipe } from './shared/pipes/age.pipe';
 import { searchPipe } from './shared/pipes/search.pipe';
@@ -16,14 +18,14 @@ import { GetNamePurePipe, GetNameImpurePipe } from "./shared/pipes/get-name.pipe
 import { FetchJsonPipe } from './shared/pipes/fetch-json.pipe'
 
 import { Routes, RouterModule } from '@angular/router';
-import {AppRoutingModule } from './app-routing.module' //
+import {AppRoutingModule } from './app-routing.module'; //
 
 enableProdMode();
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule  ],// all modules
     declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, HeroLiteComponent,
                  AgePipe,searchPipe, GetNamePurePipe, GetNameImpurePipe, FetchJsonPipe],//all components
-  providers: [HeroService],
+  providers: [HeroService,HeroDetailGuard],
   bootstrap: [AppComponent],//start component
   
 })

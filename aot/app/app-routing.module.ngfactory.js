@@ -18,8 +18,9 @@ var import4 = require("./dashboard.component.ngfactory");
 var import5 = require("./hero-lite.component.ngfactory");
 var import6 = require("./heroes.component.ngfactory");
 var import7 = require("../../app/dashboard.component");
-var import8 = require("../../app/hero-lite.component");
-var import9 = require("../../app/heroes.component");
+var import8 = require("../../app/hero-guard.service");
+var import9 = require("../../app/hero-lite.component");
+var import10 = require("../../app/heroes.component");
 var AppRoutingModuleInjector = (function (_super) {
     __extends(AppRoutingModuleInjector, _super);
     function AppRoutingModuleInjector(parent) {
@@ -150,11 +151,12 @@ var AppRoutingModuleInjector = (function (_super) {
                 },
                 {
                     path: 'detail/:id',
-                    component: import8.HeroLiteComponent
+                    canActivate: [import8.HeroDetailGuard],
+                    component: import9.HeroLiteComponent
                 },
                 {
                     path: 'heroes',
-                    component: import9.HeroesComponent
+                    component: import10.HeroesComponent
                 }
             ]
         ];
@@ -235,5 +237,5 @@ var AppRoutingModuleInjector = (function (_super) {
     return AppRoutingModuleInjector;
 }(import0.ɵNgModuleInjector));
 exports.AppRoutingModuleNgFactory = new import0.NgModuleFactory(AppRoutingModuleInjector, import1.AppRoutingModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAtcm91dGluZy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAtcm91dGluZy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAtcm91dGluZy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAtcm91dGluZy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
 //# sourceMappingURL=app-routing.module.ngfactory.js.map

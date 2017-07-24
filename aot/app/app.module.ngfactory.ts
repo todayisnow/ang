@@ -15,13 +15,14 @@ import * as import5 from '@angular/forms';
 import * as import6 from '@angular/http';
 import * as import7 from '../../app/app-routing.module';
 import * as import8 from '../../app/hero.service';
-import * as import9 from './dashboard.component.ngfactory';
-import * as import10 from './hero-lite.component.ngfactory';
-import * as import11 from './heroes.component.ngfactory';
-import * as import12 from './app.component.ngfactory';
-import * as import13 from '../../app/dashboard.component';
-import * as import14 from '../../app/hero-lite.component';
-import * as import15 from '../../app/heroes.component';
+import * as import9 from '../../app/hero-guard.service';
+import * as import10 from './dashboard.component.ngfactory';
+import * as import11 from './hero-lite.component.ngfactory';
+import * as import12 from './heroes.component.ngfactory';
+import * as import13 from './app.component.ngfactory';
+import * as import14 from '../../app/dashboard.component';
+import * as import15 from '../../app/hero-lite.component';
+import * as import16 from '../../app/heroes.component';
 class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
   _CommonModule_0:import2.CommonModule;
   _ErrorHandler_1:any;
@@ -81,14 +82,15 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
   __ROUTER_INITIALIZER_55:any;
   __APP_BOOTSTRAP_LISTENER_56:any[];
   __HeroService_57:import8.HeroService;
+  __HeroDetailGuard_58:import9.HeroDetailGuard;
   constructor(parent:import0.Injector) {
     super(parent,[
-      import9.DashboardComponentNgFactory,
-      import10.HeroLiteComponentNgFactory,
-      import11.HeroesComponentNgFactory,
-      import12.AppComponentNgFactory
+      import10.DashboardComponentNgFactory,
+      import11.HeroLiteComponentNgFactory,
+      import12.HeroesComponentNgFactory,
+      import13.AppComponentNgFactory
     ]
-    ,[import12.AppComponentNgFactory]);
+    ,[import13.AppComponentNgFactory]);
   }
   get _LOCALE_ID_26():any {
     if ((this.__LOCALE_ID_26 == null)) { (this.__LOCALE_ID_26 = import0.ɵn(this.parent.get(import0.LOCALE_ID,(null as any)))); }
@@ -223,6 +225,10 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
     if ((this.__HeroService_57 == null)) { (this.__HeroService_57 = new import8.HeroService(this._Http_49)); }
     return this.__HeroService_57;
   }
+  get _HeroDetailGuard_58():import9.HeroDetailGuard {
+    if ((this.__HeroDetailGuard_58 == null)) { (this.__HeroDetailGuard_58 = new import9.HeroDetailGuard(this._Router_22)); }
+    return this.__HeroDetailGuard_58;
+  }
   createInternal():import1.AppModule {
     this._CommonModule_0 = new import2.CommonModule();
     this._ErrorHandler_1 = import4.ɵa();
@@ -259,18 +265,19 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
         ,
         {
           path: 'dashboard',
-          component: import13.DashboardComponent,
+          component: import14.DashboardComponent,
           data: {title: 'MyData'}
         }
         ,
         {
           path: 'detail/:id',
-          component: import14.HeroLiteComponent
+          canActivate: [import9.HeroDetailGuard],
+          component: import15.HeroLiteComponent
         }
         ,
         {
           path: 'heroes',
-          component: import15.HeroesComponent
+          component: import16.HeroesComponent
         }
 
       ]
@@ -340,6 +347,7 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
     if ((token === import3.ROUTER_INITIALIZER)) { return this._ROUTER_INITIALIZER_55; }
     if ((token === import0.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_56; }
     if ((token === import8.HeroService)) { return this._HeroService_57; }
+    if ((token === import9.HeroDetailGuard)) { return this._HeroDetailGuard_58; }
     return notFoundResult;
   }
   destroyInternal():void {
@@ -349,4 +357,4 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
   }
 }
 export const AppModuleNgFactory:import0.NgModuleFactory<import1.AppModule> = new import0.NgModuleFactory<any>(AppModuleInjector,import1.AppModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvYXBwLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvYXBwLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==

@@ -4,14 +4,15 @@
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
-import * as import0 from '@angular/core';
-import * as import1 from '@angular/forms';
-import * as import2 from '@angular/common';
-import * as import3 from '../../app/hero-lite.component';
-import * as import4 from '../../app/hero.service';
-import * as import5 from '@angular/router';
+"use strict";
+var import0 = require("@angular/core");
+var import1 = require("@angular/forms");
+var import2 = require("@angular/common");
+var import3 = require("../../app/hero-lite.component");
+var import4 = require("../../app/hero.service");
+var import5 = require("@angular/router");
 var styles_HeroLiteComponent = [];
-export var RenderType_HeroLiteComponent = import0.ɵcrt({
+exports.RenderType_HeroLiteComponent = import0.ɵcrt({
     encapsulation: 2,
     styles: styles_HeroLiteComponent,
     data: {}
@@ -183,7 +184,7 @@ function View_HeroLiteComponent_1(l) {
         ck(v, 16, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8);
     });
 }
-export function View_HeroLiteComponent_0(l) {
+function View_HeroLiteComponent_0(l) {
     return import0.ɵvid(0, [
         (l()(), import0.ɵted(null, ['\n    '])),
         (l()(), import0.ɵand(8388608, null, null, 1, null, View_HeroLiteComponent_1)),
@@ -217,9 +218,10 @@ export function View_HeroLiteComponent_0(l) {
         ck(v, 2, 0, currVal_0);
     }, null);
 }
+exports.View_HeroLiteComponent_0 = View_HeroLiteComponent_0;
 function View_HeroLiteComponent_Host_0(l) {
     return import0.ɵvid(0, [
-        (l()(), import0.ɵeld(0, null, null, 1, 'hero-lite', [], null, null, null, View_HeroLiteComponent_0, RenderType_HeroLiteComponent)),
+        (l()(), import0.ɵeld(0, null, null, 1, 'hero-lite', [], null, null, null, View_HeroLiteComponent_0, exports.RenderType_HeroLiteComponent)),
         import0.ɵdid(57344, null, 0, import3.HeroLiteComponent, [
             import4.HeroService,
             import5.ActivatedRoute,
@@ -229,5 +231,6 @@ function View_HeroLiteComponent_Host_0(l) {
         ck(v, 1, 0);
     }, null);
 }
-export var HeroLiteComponentNgFactory = import0.ɵccf('hero-lite', import3.HeroLiteComponent, View_HeroLiteComponent_Host_0, { hero: 'hero' }, {}, []);
+exports.HeroLiteComponentNgFactory = import0.ɵccf('hero-lite', import3.HeroLiteComponent, View_HeroLiteComponent_Host_0, { hero: 'hero' }, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9oZXJvLWxpdGUuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvaGVyby1saXRlLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvaGVyby1saXRlLmNvbXBvbmVudC50cy5IZXJvTGl0ZUNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9oZXJvLWxpdGUuY29tcG9uZW50LnRzLkhlcm9MaXRlQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiXG4gICAgPGRpdiAqbmdJZj1cImhlcm9cIj5cbiAgICAgIDxoMj57e2hlcm8ubmFtZX19IGRldGFpbHMhPC9oMj5cbiAgICAgIDxkaXY+XG4gICAgICAgIDxsYWJlbD5pZDogPC9sYWJlbD57e2hlcm8uaWR9fVxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2PlxuICAgICAgICA8bGFiZWw+bmFtZTogPC9sYWJlbD5cbiAgICAgICAgPGlucHV0IFsobmdNb2RlbCldPVwiaGVyby5uYW1lXCIgcGxhY2Vob2xkZXI9XCJuYW1lXCIvPlxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG48YnV0dG9uIChjbGljayk9XCJnb0JhY2soKVwiPkJhY2s8L2J1dHRvbj5cbiAgIiwiPGhlcm8tbGl0ZT48L2hlcm8tbGl0ZT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQ0NJO0lBQWtCO0lBQ2hCO0lBQUk7TUFBQTtNQUFBO0lBQUE7SUFBQTtJQUEyQjtJQUMvQjtJQUFLO0lBQ0g7SUFBTztJQUFZO01BQUE7TUFBQTtJQUFBO0lBQUE7SUFDZjtJQUNOO0lBQUs7SUFDSDtJQUFPO0lBQWM7TUFDckI7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7TUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBTztRQUFBO1FBQUE7TUFBQTtNQUFQO0lBQUE7Z0JBQUE7OztNQUFBO1FBQUE7O01BQUE7O0lBQUE7S0FBQTtnQkFBQTtNQUFBO0lBQUE7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBOztNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtnQkFBQTtnQkFBQTtJQUFtRDtJQUMvQzs7OztJQURHO0lBQVAsVUFBTyxTQUFQOzs7SUFORTtJQUFBO0lBRWlCO0lBQUE7SUFJbkI7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxVQUFBLHFFQUFBOzs7OztJQVJSO0lBQ0k7Z0JBQUE7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQVNNO01BQ1Y7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFBUTtRQUFBO1FBQUE7TUFBQTtNQUFSO0lBQUE7SUFBMkI7SUFBYTs7OztJQVYvQjtJQUFMLFNBQUssU0FBTDs7Ozs7SUNESjtnQkFBQTs7OztJQUFBO0tBQUE7OztJQUFBOzs7In0=
 //# sourceMappingURL=hero-lite.component.ngfactory.js.map

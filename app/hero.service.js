@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,24 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Injectable } from '@angular/core';
-import { HEROES } from './mock-heroes';
-import { GetHeroes, PostHeroes } from './webapi';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import { Http, Headers, RequestOptions } from '@angular/http';
+var core_1 = require("@angular/core");
+var mock_heroes_1 = require("./mock-heroes");
+var Observable_1 = require("rxjs/Observable");
+var webapi_1 = require("./webapi");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
+require("rxjs/add/operator/do");
+var http_1 = require("@angular/http");
 var HeroService = (function () {
     function HeroService(http) {
         this.http = http;
     }
     HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(HEROES);
+        return Promise.resolve(mock_heroes_1.HEROES);
     };
     HeroService.prototype.addHero = function (hero) {
         var body = JSON.stringify(hero);
-        var headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8', 'Accept': 'application/json' });
-        var options = new RequestOptions({ headers: headers });
-        return this.http.post(PostHeroes, body, options)
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json; charset=utf-8', 'Accept': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post(webapi_1.PostHeroes, body, options)
             .map(function (data) {
             return data.json();
         })
@@ -33,9 +36,14 @@ var HeroService = (function () {
     // stub
     HeroService.prototype.getObservableHeroes = function () {
         // return this.http.get('./heroes2.json')
-        return this.http.get(GetHeroes)
+        return this.http.get(webapi_1.GetHeroes)
             .map(function (heroes) { return heroes.json(); })
-            .catch(function (x) { return x.json(); });
+            .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
+            .catch(this.handleError);
+    };
+    HeroService.prototype.handleError = function (error) {
+        console.log(error);
+        return Observable_1.Observable.throw(error.json().error || 'Server Error');
     };
     HeroService.prototype.getHeroesSlowly = function () {
         var _this = this;
@@ -45,15 +53,15 @@ var HeroService = (function () {
         });
     };
     HeroService.prototype.getHero = function (id) {
-        return Promise.resolve(HEROES.find(function (hero) { return hero.id === id; }));
+        return Promise.resolve(mock_heroes_1.HEROES.find(function (hero) { return hero.id === id; }));
         //return this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
     };
     return HeroService;
 }());
 HeroService = __decorate([
-    Injectable() //emit metadata about the service. The metadata specifies that Angular may need to inject other dependencies into this service.
+    core_1.Injectable() //emit metadata about the service. The metadata specifies that Angular may need to inject other dependencies into this service.
     ,
-    __metadata("design:paramtypes", [Http])
+    __metadata("design:paramtypes", [http_1.Http])
 ], HeroService);
-export { HeroService };
+exports.HeroService = HeroService;
 //# sourceMappingURL=hero.service.js.map

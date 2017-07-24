@@ -4,36 +4,38 @@
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
+"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-import * as import0 from '@angular/core';
-import * as import1 from '../../app/app.module';
-import * as import2 from '@angular/common';
-import * as import3 from '@angular/router';
-import * as import4 from '@angular/platform-browser';
-import * as import5 from '@angular/forms';
-import * as import6 from '@angular/http';
-import * as import7 from '../../app/app-routing.module';
-import * as import8 from '../../app/hero.service';
-import * as import9 from './dashboard.component.ngfactory';
-import * as import10 from './hero-lite.component.ngfactory';
-import * as import11 from './heroes.component.ngfactory';
-import * as import12 from './app.component.ngfactory';
-import * as import13 from '../../app/dashboard.component';
-import * as import14 from '../../app/hero-lite.component';
-import * as import15 from '../../app/heroes.component';
+var import0 = require("@angular/core");
+var import1 = require("../../app/app.module");
+var import2 = require("@angular/common");
+var import3 = require("@angular/router");
+var import4 = require("@angular/platform-browser");
+var import5 = require("@angular/forms");
+var import6 = require("@angular/http");
+var import7 = require("../../app/app-routing.module");
+var import8 = require("../../app/hero.service");
+var import9 = require("../../app/hero-guard.service");
+var import10 = require("./dashboard.component.ngfactory");
+var import11 = require("./hero-lite.component.ngfactory");
+var import12 = require("./heroes.component.ngfactory");
+var import13 = require("./app.component.ngfactory");
+var import14 = require("../../app/dashboard.component");
+var import15 = require("../../app/hero-lite.component");
+var import16 = require("../../app/heroes.component");
 var AppModuleInjector = (function (_super) {
     __extends(AppModuleInjector, _super);
     function AppModuleInjector(parent) {
         return _super.call(this, parent, [
-            import9.DashboardComponentNgFactory,
-            import10.HeroLiteComponentNgFactory,
-            import11.HeroesComponentNgFactory,
-            import12.AppComponentNgFactory
-        ], [import12.AppComponentNgFactory]) || this;
+            import10.DashboardComponentNgFactory,
+            import11.HeroLiteComponentNgFactory,
+            import12.HeroesComponentNgFactory,
+            import13.AppComponentNgFactory
+        ], [import13.AppComponentNgFactory]) || this;
     }
     Object.defineProperty(AppModuleInjector.prototype, "_LOCALE_ID_26", {
         get: function () {
@@ -359,6 +361,16 @@ var AppModuleInjector = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(AppModuleInjector.prototype, "_HeroDetailGuard_58", {
+        get: function () {
+            if ((this.__HeroDetailGuard_58 == null)) {
+                (this.__HeroDetailGuard_58 = new import9.HeroDetailGuard(this._Router_22));
+            }
+            return this.__HeroDetailGuard_58;
+        },
+        enumerable: true,
+        configurable: true
+    });
     AppModuleInjector.prototype.createInternal = function () {
         this._CommonModule_0 = new import2.CommonModule();
         this._ErrorHandler_1 = import4.ɵa();
@@ -393,16 +405,17 @@ var AppModuleInjector = (function (_super) {
                 },
                 {
                     path: 'dashboard',
-                    component: import13.DashboardComponent,
+                    component: import14.DashboardComponent,
                     data: { title: 'MyData' }
                 },
                 {
                     path: 'detail/:id',
-                    component: import14.HeroLiteComponent
+                    canActivate: [import9.HeroDetailGuard],
+                    component: import15.HeroLiteComponent
                 },
                 {
                     path: 'heroes',
-                    component: import15.HeroesComponent
+                    component: import16.HeroesComponent
                 }
             ]
         ];
@@ -587,6 +600,9 @@ var AppModuleInjector = (function (_super) {
         if ((token === import8.HeroService)) {
             return this._HeroService_57;
         }
+        if ((token === import9.HeroDetailGuard)) {
+            return this._HeroDetailGuard_58;
+        }
         return notFoundResult;
     };
     AppModuleInjector.prototype.destroyInternal = function () {
@@ -596,5 +612,6 @@ var AppModuleInjector = (function (_super) {
     };
     return AppModuleInjector;
 }(import0.ɵNgModuleInjector));
-export var AppModuleNgFactory = new import0.NgModuleFactory(AppModuleInjector, import1.AppModule);
+exports.AppModuleNgFactory = new import0.NgModuleFactory(AppModuleInjector, import1.AppModule);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvYXBwLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
 //# sourceMappingURL=app.module.ngfactory.js.map

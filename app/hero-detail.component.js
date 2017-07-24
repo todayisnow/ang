@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,13 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Hero } from './shared/classes/hero';
+var core_1 = require("@angular/core");
+var hero_1 = require("./shared/classes/hero");
 var HeroDetailComponent = (function () {
     function HeroDetailComponent() {
         this.dateType = 0;
         this.asIf = new Date(2020, 1, 1).getTime();
-        this.sendSubTitle = new EventEmitter();
+        this.sendSubTitle = new core_1.EventEmitter();
     }
     HeroDetailComponent.prototype.onSendSubTitle = function () {
         this.sendSubTitle.emit("My " + this.hero.name);
@@ -34,19 +35,19 @@ var HeroDetailComponent = (function () {
     return HeroDetailComponent;
 }());
 __decorate([
-    Input(),
-    __metadata("design:type", Hero)
+    core_1.Input(),
+    __metadata("design:type", hero_1.Hero)
 ], HeroDetailComponent.prototype, "hero", void 0);
 __decorate([
-    Output(),
-    __metadata("design:type", EventEmitter)
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], HeroDetailComponent.prototype, "sendSubTitle", void 0);
 HeroDetailComponent = __decorate([
-    Component({
+    core_1.Component({
         selector: 'hero-detail',
         moduleId: "./app/",
         templateUrl: './hero-detail.component.html'
     })
 ], HeroDetailComponent);
-export { HeroDetailComponent };
+exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map

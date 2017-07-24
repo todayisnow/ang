@@ -4,14 +4,15 @@
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
-import * as import0 from './dashboard.component.css.shim.ngstyle';
-import * as import1 from '@angular/core';
-import * as import2 from '@angular/router';
-import * as import3 from '@angular/common';
-import * as import4 from '../../app/dashboard.component';
-import * as import5 from '../../app/hero.service';
+"use strict";
+var import0 = require("./dashboard.component.css.shim.ngstyle");
+var import1 = require("@angular/core");
+var import2 = require("@angular/router");
+var import3 = require("@angular/common");
+var import4 = require("../../app/dashboard.component");
+var import5 = require("../../app/hero.service");
 var styles_DashboardComponent = [import0.styles];
-export var RenderType_DashboardComponent = import1.ɵcrt({
+exports.RenderType_DashboardComponent = import1.ɵcrt({
     encapsulation: 0,
     styles: styles_DashboardComponent,
     data: {}
@@ -80,7 +81,7 @@ function View_DashboardComponent_1(l) {
         ck(v, 7, 0, currVal_3);
     });
 }
-export function View_DashboardComponent_0(l) {
+function View_DashboardComponent_0(l) {
     return import1.ɵvid(0, [
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)),
@@ -109,9 +110,10 @@ export function View_DashboardComponent_0(l) {
         ck(v, 7, 0, currVal_0);
     }, null);
 }
+exports.View_DashboardComponent_0 = View_DashboardComponent_0;
 function View_DashboardComponent_Host_0(l) {
     return import1.ɵvid(0, [
-        (l()(), import1.ɵeld(0, null, null, 1, 'my-dashboard', [], null, null, null, View_DashboardComponent_0, RenderType_DashboardComponent)),
+        (l()(), import1.ɵeld(0, null, null, 1, 'my-dashboard', [], null, null, null, View_DashboardComponent_0, exports.RenderType_DashboardComponent)),
         import1.ɵdid(57344, null, 0, import4.DashboardComponent, [
             import5.HeroService,
             import2.ActivatedRoute
@@ -120,5 +122,6 @@ function View_DashboardComponent_Host_0(l) {
         ck(v, 1, 0);
     }, null);
 }
-export var DashboardComponentNgFactory = import1.ɵccf('my-dashboard', import4.DashboardComponent, View_DashboardComponent_Host_0, {}, {}, []);
+exports.DashboardComponentNgFactory = import1.ɵccf('my-dashboard', import4.DashboardComponent, View_DashboardComponent_Host_0, {}, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9kYXNoYm9hcmQuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvZGFzaGJvYXJkLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvZGFzaGJvYXJkLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9kYXNoYm9hcmQuY29tcG9uZW50LnRzLkRhc2hib2FyZENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIlxyXG48aDM+IFRvcCBIZXJvZXM8L2gzPlxyXG48ZGl2IGNsYXNzPVwiZ3JpZCBncmlkLXBhZFwiPlxyXG4gICAgPGEgKm5nRm9yPVwibGV0IGhlcm8gb2YgaGVyb2VzXCIgY2xhc3M9XCJjb2wtMS00XCIgW3JvdXRlckxpbmtdPVwiWycvZGV0YWlsJywgaGVyby5pZF1cIj5cclxuICAgICAgICA8ZGl2IGNsYXNzPVwibW9kdWxlIGhlcm9cIj5cclxuICAgICAgICAgICAgPGg0Pnt7aGVyby5uYW1lIH19PC9oND5cclxuICAgICAgICA8L2Rpdj5cclxuICAgIDwvYT5cclxuPC9kaXY+IiwiPG15LWRhc2hib2FyZD48L215LWRhc2hib2FyZD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQ0dJO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO0lBQUE7Z0JBQUE7Ozs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7Z0JBQStDO0lBQW9DO01BQy9FO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBeUI7SUFDckI7SUFBSTtNQUFBO01BQUE7SUFBQTtJQUFBO0lBQW1CO0lBQ3JCOzs7SUFIcUM7SUFBL0MsU0FBK0MsU0FBL0M7O0lBQUE7SUFBQTtJQUFBLFNBQUEsbUJBQUE7SUFFWTtJQUFBOzs7OztJQUxoQjtJQUNBO0lBQUk7SUFBZ0I7TUFDcEI7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUEyQjtJQUN2QjtnQkFBQTs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUlJOzs7O0lBSkQ7SUFBSCxTQUFHLFNBQUg7Ozs7O0lDSEo7Z0JBQUE7OztJQUFBO0tBQUE7OztJQUFBOzs7In0=
 //# sourceMappingURL=dashboard.component.ngfactory.js.map

@@ -6,16 +6,18 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroLiteComponent } from './hero-lite.component';
 
+import {HeroDetailGuard} from './hero-guard.service';
+
 const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent, data: {title:'MyData'} },
-    { path: 'detail/:id', component: HeroLiteComponent },
+    { path: 'detail/:id',canActivate:[HeroDetailGuard], component: HeroLiteComponent },
     { path: 'heroes', component: HeroesComponent },
     //{ path: ** , component:PageNotFoundComponent }  //wildcard route
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { useHash: true })],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

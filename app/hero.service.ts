@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { GetHeroes, PostHeroes } from './webapi'
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/do';
 import { Http, Response, Headers, RequestOptions } from '@angular/http'
 
 @Injectable() //emit metadata about the service. The metadata specifies that Angular may need to inject other dependencies into this service.
@@ -38,11 +39,17 @@ export class HeroService {
         // return this.http.get('./heroes2.json')
         return this.http.get(GetHeroes)
             .map(heroes => <Hero[]>heroes.json())
-            .catch((x: Response) =>  x.json() );
+			.do(data=> console.log('All: '+JSON.stringify(data)))
+            .catch(this.handleError );
 
     }
 
-
+	private handleError(error:Response)
+	{
+		console.log(error);
+	return Observable.throw(error.json().error || 'Server Error');
+	}
+	
     getHeroesSlowly(): Promise<Hero[]> {
 
 
