@@ -17,7 +17,7 @@ var HeroDetailGuard = (function () {
     HeroDetailGuard.prototype.canActivate = function (route) {
         var id = +route.url[1].path;
         if (isNaN(id) || id < 1) {
-            alert('Invalid product Id');
+            alert('Invalid Product Id');
             // start a new navigation to redirect to list page
             this._router.navigate(['/dashboard']);
             // abort current navigation

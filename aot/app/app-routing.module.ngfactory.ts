@@ -91,7 +91,7 @@ class AppRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.AppRou
     this._ɵa_0 = import2.ɵd(this.parent.get(import2.Router,(null as any)));
     this._UrlSerializer_1 = new import2.DefaultUrlSerializer();
     this._RouterOutletMap_2 = new import2.RouterOutletMap();
-    this._ROUTER_CONFIGURATION_3 = {useHash: true};
+    this._ROUTER_CONFIGURATION_3 = {};
     this._LocationStrategy_4 = import2.ɵc(this.parent.get(import3.PlatformLocation),this.parent.get(import3.APP_BASE_HREF,(null as any)),this._ROUTER_CONFIGURATION_3);
     this._Location_5 = new import3.Location(this._LocationStrategy_4);
     this._NgModuleFactoryLoader_6 = new import0.SystemJsNgModuleLoader(this.parent.get(import0.Compiler),this.parent.get(import0.SystemJsNgModuleLoaderConfig,(null as any)));

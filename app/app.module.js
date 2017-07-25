@@ -16,11 +16,15 @@ var heroes_component_1 = require("./heroes.component");
 var dashboard_component_1 = require("./dashboard.component");
 var hero_service_1 = require("./hero.service");
 var hero_guard_service_1 = require("./hero-guard.service");
+var products_component_1 = require("./products/products.component");
 var age_pipe_1 = require("./shared/pipes/age.pipe");
 var search_pipe_1 = require("./shared/pipes/search.pipe");
 var get_name_pipe_1 = require("./shared/pipes/get-name.pipe");
 var fetch_json_pipe_1 = require("./shared/pipes/fetch-json.pipe");
 var app_routing_module_1 = require("./app-routing.module"); //
+// Imports for loading & configuring the in-memory web api
+var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
+var in_memory_data_service_1 = require("./in-memory-data.service");
 core_1.enableProdMode();
 var AppModule = (function () {
     function AppModule() {
@@ -29,8 +33,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, app_routing_module_1.AppRoutingModule],
-        declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, dashboard_component_1.DashboardComponent, hero_lite_component_1.HeroLiteComponent,
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService, { delay: 1000 }), app_routing_module_1.AppRoutingModule],
+        declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, dashboard_component_1.DashboardComponent, hero_lite_component_1.HeroLiteComponent, products_component_1.ProductsComponent,
             age_pipe_1.AgePipe, search_pipe_1.searchPipe, get_name_pipe_1.GetNamePurePipe, get_name_pipe_1.GetNameImpurePipe, fetch_json_pipe_1.FetchJsonPipe],
         providers: [hero_service_1.HeroService, hero_guard_service_1.HeroDetailGuard],
         bootstrap: [app_component_1.AppComponent],
