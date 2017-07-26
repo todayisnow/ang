@@ -1,3 +1,4 @@
+"use strict";
 var InMemoryDataService = (function () {
     function InMemoryDataService() {
     }
@@ -65,5 +66,5 @@ var InMemoryDataService = (function () {
     };
     return InMemoryDataService;
 }());
-export { InMemoryDataService };
+exports.InMemoryDataService = InMemoryDataService;
 //# sourceMappingURL=in-memory-data.service.js.map

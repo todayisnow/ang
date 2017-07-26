@@ -4,39 +4,40 @@
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
+"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-import * as import0 from '@angular/core';
-import * as import1 from '../../app/app.module';
-import * as import2 from '@angular/common';
-import * as import3 from '@angular/router';
-import * as import4 from '@angular/platform-browser';
-import * as import5 from '@angular/forms';
-import * as import6 from '@angular/http';
-import * as import7 from '../../app/products/product.module';
-import * as import8 from 'angular-in-memory-web-api/in-memory-web-api.module';
-import * as import9 from '../../app/app-routing.module';
-import * as import10 from '../../app/in-memory-data.service';
-import * as import11 from '../../app/products/product.service';
-import * as import12 from '../../app/hero.service';
-import * as import13 from '../../app/hero-guard.service';
-import * as import14 from './products/product-list.component.ngfactory';
-import * as import15 from './products/product-detail.component.ngfactory';
-import * as import16 from './products/product-edit.component.ngfactory';
-import * as import17 from './dashboard.component.ngfactory';
-import * as import18 from './hero-lite.component.ngfactory';
-import * as import19 from './heroes.component.ngfactory';
-import * as import20 from './app.component.ngfactory';
-import * as import21 from '../../app/products/product-list.component';
-import * as import22 from '../../app/products/product-detail.component';
-import * as import23 from '../../app/products/product-edit.component';
-import * as import24 from '../../app/dashboard.component';
-import * as import25 from '../../app/hero-lite.component';
-import * as import26 from '../../app/heroes.component';
-import * as import27 from 'angular-in-memory-web-api/in-memory-backend.service';
+var import0 = require("@angular/core");
+var import1 = require("../../app/app.module");
+var import2 = require("@angular/common");
+var import3 = require("@angular/router");
+var import4 = require("@angular/platform-browser");
+var import5 = require("@angular/forms");
+var import6 = require("@angular/http");
+var import7 = require("../../app/products/product.module");
+var import8 = require("angular-in-memory-web-api/in-memory-web-api.module");
+var import9 = require("../../app/app-routing.module");
+var import10 = require("../../app/in-memory-data.service");
+var import11 = require("../../app/products/product.service");
+var import12 = require("../../app/hero.service");
+var import13 = require("../../app/hero-guard.service");
+var import14 = require("./products/product-list.component.ngfactory");
+var import15 = require("./products/product-detail.component.ngfactory");
+var import16 = require("./products/product-edit.component.ngfactory");
+var import17 = require("./dashboard.component.ngfactory");
+var import18 = require("./hero-lite.component.ngfactory");
+var import19 = require("./heroes.component.ngfactory");
+var import20 = require("./app.component.ngfactory");
+var import21 = require("../../app/products/product-list.component");
+var import22 = require("../../app/products/product-detail.component");
+var import23 = require("../../app/products/product-edit.component");
+var import24 = require("../../app/dashboard.component");
+var import25 = require("../../app/hero-lite.component");
+var import26 = require("../../app/heroes.component");
+var import27 = require("angular-in-memory-web-api/in-memory-backend.service");
 var AppModuleInjector = (function (_super) {
     __extends(AppModuleInjector, _super);
     function AppModuleInjector(parent) {
@@ -678,5 +679,6 @@ var AppModuleInjector = (function (_super) {
     };
     return AppModuleInjector;
 }(import0.ɵNgModuleInjector));
-export var AppModuleNgFactory = new import0.NgModuleFactory(AppModuleInjector, import1.AppModule);
+exports.AppModuleNgFactory = new import0.NgModuleFactory(AppModuleInjector, import1.AppModule);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvQWRtaW5pc3RyYXRvci9Eb2N1bWVudHMvVmlzdWFsIFN0dWRpbyAyMDE3L1Byb2plY3RzL1F1aWNrL1F1aWNrL2FwcC9hcHAubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL0FkbWluaXN0cmF0b3IvRG9jdW1lbnRzL1Zpc3VhbCBTdHVkaW8gMjAxNy9Qcm9qZWN0cy9RdWljay9RdWljay9hcHAvYXBwLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
 //# sourceMappingURL=app.module.ngfactory.js.map

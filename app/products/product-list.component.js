@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ProductService } from './product.service';
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var product_service_1 = require("./product.service");
 var ProductListComponent = (function () {
     function ProductListComponent(productService, route) {
         this.productService = productService;
@@ -32,12 +33,12 @@ var ProductListComponent = (function () {
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
-    Component({
+    core_1.Component({
         templateUrl: './product-list.component.html',
         styleUrls: ['./product-list.component.css']
     }),
-    __metadata("design:paramtypes", [ProductService,
-        ActivatedRoute])
+    __metadata("design:paramtypes", [product_service_1.ProductService,
+        router_1.ActivatedRoute])
 ], ProductListComponent);
-export { ProductListComponent };
+exports.ProductListComponent = ProductListComponent;
 //# sourceMappingURL=product-list.component.js.map

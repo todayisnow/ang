@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+var core_1 = require("@angular/core");
 var StarComponent = (function () {
     function StarComponent() {
-        this.ratingClicked = new EventEmitter();
+        this.ratingClicked = new core_1.EventEmitter();
     }
     StarComponent.prototype.ngOnChanges = function () {
         // Convert x out of 5 starts
@@ -23,19 +24,19 @@ var StarComponent = (function () {
     return StarComponent;
 }());
 __decorate([
-    Input(),
+    core_1.Input(),
     __metadata("design:type", Number)
 ], StarComponent.prototype, "rating", void 0);
 __decorate([
-    Output(),
-    __metadata("design:type", EventEmitter)
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], StarComponent.prototype, "ratingClicked", void 0);
 StarComponent = __decorate([
-    Component({
+    core_1.Component({
         selector: 'ai-star',
         templateUrl: './star.component.html',
         styleUrls: ['./star.component.css']
     })
 ], StarComponent);
-export { StarComponent };
+exports.StarComponent = StarComponent;
 //# sourceMappingURL=star.component.js.map
