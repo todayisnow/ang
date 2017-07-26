@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var Observable_1 = require("rxjs/Observable");
-require("rxjs/add/observable/interval");
-require("rxjs/add/operator/map");
-require("rxjs/add/operator/take");
-var hero_service_1 = require("./hero.service");
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
+import { HeroService } from "./hero.service";
 var AppComponent = (function () {
     function AppComponent(heroService) {
         this.heroService = heroService;
@@ -25,7 +24,7 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.resend = function () {
         var _this = this;
-        this.title$ = Observable_1.Observable.interval(500)
+        this.title$ = Observable.interval(500)
             .map(function (i) { return _this.title[i]; })
             .take(this.title.length);
     };
@@ -39,12 +38,12 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    core_1.Component({
+    Component({
         selector: 'my-app',
         styleUrls: ['./app.component.css'],
         templateUrl: './app.component.html'
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
+    __metadata("design:paramtypes", [HeroService])
 ], AppComponent);
-exports.AppComponent = AppComponent;
+export { AppComponent };
 //# sourceMappingURL=app.component.js.map

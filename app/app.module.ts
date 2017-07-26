@@ -10,7 +10,7 @@ import { HeroesComponent } from "./heroes.component";
 import { DashboardComponent } from "./dashboard.component";
 import { HeroService } from './hero.service';
 import { HeroDetailGuard } from './hero-guard.service';
-import { ProductsComponent } from './products/products.component'
+
 
 import { AgePipe } from './shared/pipes/age.pipe';
 import { searchPipe } from './shared/pipes/search.pipe';
@@ -25,13 +25,13 @@ import {AppRoutingModule } from './app-routing.module'; //
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
-
+import {ProductModule } from "./products/product.module"
 
 
 enableProdMode();
 @NgModule({
-    imports: [BrowserModule, FormsModule, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 }), AppRoutingModule  ],// all modules
-    declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, HeroLiteComponent, ProductsComponent
+    imports: [BrowserModule, FormsModule, HttpModule, ProductModule, InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 }), AppRoutingModule  ],// all modules
+    declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, HeroLiteComponent, 
                  AgePipe,searchPipe, GetNamePurePipe, GetNameImpurePipe, FetchJsonPipe],//all components
   providers: [HeroService,HeroDetailGuard],
   bootstrap: [AppComponent],//start component

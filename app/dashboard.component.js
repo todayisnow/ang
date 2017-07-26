@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var hero_service_1 = require("./hero.service");
-var router_1 = require("@angular/router");
-require("rxjs/add/operator/map");
+import { Component } from '@angular/core';
+import { HeroService } from './hero.service';
+import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/map';
 var DashboardComponent = (function () {
     function DashboardComponent(heroService, route) {
         this.heroService = heroService;
@@ -27,18 +26,18 @@ var DashboardComponent = (function () {
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
-    core_1.Component({
+    Component({
         selector: 'my-dashboard',
         styleUrls: ['./dashboard.component.css'],
         templateUrl: './dashboard.component.html'
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService, router_1.ActivatedRoute])
+    __metadata("design:paramtypes", [HeroService, ActivatedRoute])
 ], DashboardComponent);
-exports.DashboardComponent = DashboardComponent;
+export { DashboardComponent };
 var ExternalData = (function () {
     function ExternalData() {
     }
     return ExternalData;
 }());
-exports.ExternalData = ExternalData;
+export { ExternalData };
 //# sourceMappingURL=dashboard.component.js.map

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,16 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var gender_enum_1 = require("./shared/enums/gender.enum");
-var hero_service_1 = require("./hero.service");
-var router_1 = require("@angular/router");
+import { Component } from '@angular/core';
+import { Gender } from "./shared/enums/gender.enum";
+import { HeroService } from "./hero.service";
+import { Router } from "@angular/router";
 var HeroesComponent = (function () {
     function HeroesComponent(heroService, router) {
         this.heroService = heroService;
         this.router = router;
         this.subTitle = "My Hero";
-        this.GENDER = gender_enum_1.Gender;
+        this.GENDER = Gender;
         this.obj = {
             name: "Old Obj",
             salary: 333
@@ -47,13 +46,13 @@ var HeroesComponent = (function () {
     return HeroesComponent;
 }());
 HeroesComponent = __decorate([
-    core_1.Component({
+    Component({
         selector: 'my-heroes',
         moduleId: "./app/",
         styleUrls: ['./heroes.component.css'],
         templateUrl: './heroes.component.html'
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService, router_1.Router])
+    __metadata("design:paramtypes", [HeroService, Router])
 ], HeroesComponent);
-exports.HeroesComponent = HeroesComponent;
+export { HeroesComponent };
 //# sourceMappingURL=heroes.component.js.map

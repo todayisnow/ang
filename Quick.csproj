@@ -88,7 +88,15 @@
     <Content Include="app\dashboard.component.css" />
     <Content Include="app\heroes.component.css" />
     <Content Include="app\hero-detail.component.html" />
-    <Content Include="app\products\products.component.html" />
+    <Content Include="app\products\product-detail.component.html" />
+    <Content Include="app\products\product-edit-info.component.html" />
+    <Content Include="app\products\product-edit-tags.component.html" />
+    <Content Include="app\products\product-edit.component.css" />
+    <Content Include="app\products\product-edit.component.html" />
+    <Content Include="app\products\product-list.component.css" />
+    <Content Include="app\products\product-list.component.html" />
+    <Content Include="app\star\star.component.css" />
+    <Content Include="app\star\star.component.html" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="favicon.ico" />
@@ -134,15 +142,23 @@
     <TypeScriptCompile Include="app\hero.service.ts" />
     <TypeScriptCompile Include="app\mock-heroes.ts" />
     <TypeScriptCompile Include="app\in-memory-data.service.ts" />
-    <TypeScriptCompile Include="app\products\products.component.ts" />
+    <TypeScriptCompile Include="app\products\product-data.ts" />
+    <TypeScriptCompile Include="app\products\product-detail.component.ts" />
+    <TypeScriptCompile Include="app\products\product-edit-info.component.ts" />
+    <TypeScriptCompile Include="app\products\product-edit-tags.component.ts" />
+    <TypeScriptCompile Include="app\products\product-edit.component.ts" />
+    <TypeScriptCompile Include="app\products\product-filter.pipe.ts" />
+    <TypeScriptCompile Include="app\products\product-list.component.ts" />
+    <TypeScriptCompile Include="app\products\product.module.ts" />
+    <TypeScriptCompile Include="app\products\product.service.ts" />
     <TypeScriptCompile Include="app\products\product.ts" />
-    <TypeScriptCompile Include="app\products\products.service.ts" />
     <TypeScriptCompile Include="app\shared\classes\hero.ts" />
     <TypeScriptCompile Include="app\shared\enums\gender.enum.ts" />
     <TypeScriptCompile Include="app\shared\pipes\age.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\fetch-json.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\get-name.pipe.ts" />
     <TypeScriptCompile Include="app\shared\pipes\search.pipe.ts" />
+    <TypeScriptCompile Include="app\star\star.component.ts" />
     <TypeScriptCompile Include="app\webapi.ts" />
     <TypeScriptCompile Include="main-aot.ts" />
     <TypeScriptCompile Include="main.ts" />
@@ -296,7 +312,6 @@
     <Content Include="Heroes.json" />
     <Content Include="heroes1.json" />
     <Content Include="tsconfig.aot.json" />
-    <Content Include="app\products\products.component.css" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
