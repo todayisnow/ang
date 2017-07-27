@@ -37,7 +37,11 @@ export class HeroService {
     getObservableHeroes(): Observable<Hero[]>
     {
         // return this.http.get('./heroes2.json')
-        return this.http.get(GetHeroes)
+        let headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8', 'Accept': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+
+        return this.http.get(GetHeroes, options)
             .map(heroes => <Hero[]>heroes.json())
 			.do(data=> console.log('All: '+JSON.stringify(data)))
             .catch(this.handleError );

@@ -36,7 +36,9 @@ var HeroService = (function () {
     // stub
     HeroService.prototype.getObservableHeroes = function () {
         // return this.http.get('./heroes2.json')
-        return this.http.get(webapi_1.GetHeroes)
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json; charset=utf-8', 'Accept': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.get(webapi_1.GetHeroes, options)
             .map(function (heroes) { return heroes.json(); })
             .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
             .catch(this.handleError);

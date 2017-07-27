@@ -309,8 +309,6 @@
     <Content Include="aot\node_modules\rxjs\Subject.ngsummary.json" />
     <Content Include="aot\node_modules\rxjs\Subscriber.ngsummary.json" />
     <Content Include="aot\node_modules\rxjs\Subscription.ngsummary.json" />
-    <Content Include="Heroes.json" />
-    <Content Include="heroes1.json" />
     <Content Include="tsconfig.aot.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
